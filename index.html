@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>타이핑 게임</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1><i class="fa-solid fa-keyboard"></i> 타이핑 게임!</h1>
+            <p class="subtitle">문구를 타이핑해 타자 실력을 높여보세요. <br>시작하기 위해 <b>"시작"</b> 버튼을 누르세요!</p>
+
+            <div class="game-box">
+                <p id="quote"></p>  
+                <div class="input-area">
+                    <input type="text" aria-label="current word" id="typed-value" placeholder="시작 후 입력할 수 있어요." disabled/>
+                    <button type="button" id="start"><i class="fa-solid fa-play"></i> 시작</button>
+                </div>
+            </div>
+        </div>
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <h2>🏁 게임 종료</h2>
+                <p id="time"></p>
+                <div class="buttons">
+                    <button id="one-more"><i class="fa-solid fa-rotate-right"></i> 한 번 더 하기</button>
+                    <button id="close-modal"><i class="fa-solid fa-xmark"></i> 닫기</button>
+                </div>
+            </div>
+
+        </div>
+        <footer>© 2025 Typing Game</footer>
+        <script src="script.js"></script>
+    </body>
+</html>
