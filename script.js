@@ -109,11 +109,11 @@ typedValueElement.addEventListener('input', ()=> {
         // 한글인 경우 글자가 조합되고 있는 시점에서는 에러 판정을 안 주도록 보정
         const lastChar = typedValue.charAt(typedValue.length-1);
         const thenPrevious = typedValue.charAt(typedValue.length-2);
-        console.log(`c1: ${!/[a-zA-Z]/.test(lastChar) }`);
-        console.log(`c2: ${!thenPrevious}, ${thenPrevious}`);
-        console.log(`c3: ${currentWord.startsWith(typedValue.slice(0, -1))}, ${typedValue.slice(0, -1)}`);
+        // console.log(`c1: ${!/[a-zA-Z]/.test(lastChar) }`);
+        // console.log(`c2: ${!thenPrevious}, ${thenPrevious}`);
+        // console.log(`c3: ${currentWord.startsWith(typedValue.slice(0, -1))}, ${typedValue.slice(0, -1)}`);
         if (!/[a-zA-Z]/.test(lastChar) && (!thenPrevious || currentWord.startsWith(typedValue.slice(0, -1)))) {
-            console.log(".");
+            // console.log(".");
             return;
         }
         typedValueElement.classList.add('error'); // 틀리면 error 클래스 추가
