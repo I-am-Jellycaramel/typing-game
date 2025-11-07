@@ -66,6 +66,19 @@ input[type="text"] {
   transition: all 0.3s;
 }
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+/* 잠깐 커졌다가 다시 작아지는 클래스 */
+input.shake {
+  animation: shake 0.15s;
+}
+
 input[type="text"]:focus {
   border-color: #6a5acd;
   box-shadow: 0 0 8px rgba(106, 90, 205, 0.5);
